@@ -1,3 +1,14 @@
 .mt-50 {
   margin-top: 50px;
 }
+.bgcolor-white {
+  background-color: #fff;
+}
+.mtb {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.form-control {
+  height: 28px;
+  font-size: 13px;
+}

@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://api.covid19api.com",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
