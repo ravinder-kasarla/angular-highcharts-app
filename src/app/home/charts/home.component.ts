@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 
+import { HomeService } from '../home.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  countries = [];
   highcharts: typeof Highcharts = Highcharts;
   chartOptions: Highcharts.Options = {
     series: [
@@ -29,8 +32,12 @@ export class HomeComponent implements OnInit {
     }
   };
 
-  constructor() { }
+  constructor(
+    private homeService: HomeService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.countries = this.homeService.getCountries();
+  }
 
 }
